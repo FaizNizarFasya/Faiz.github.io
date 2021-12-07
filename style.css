@@ -1,7 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 body {
-  margin: 0;
   font-family: "Rockwell";
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -10,6 +14,7 @@ a {
   text-decoration: none;
 }
 
+/* HEADER */
 .header {
   height: 90px;
   width: 100%;
@@ -21,7 +26,7 @@ a {
   font-weight: bold;
   color: #ffffff;
   float: left;
-  padding: 20px 34px;
+  margin: 15px 50px;
 }
 
 .header-left a {
@@ -134,53 +139,89 @@ label {
 }
 
 #wrab:target .bg-color {
-  position: absolute;
+  position: relative;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
+  height: 50rem;
   background-color: rgb(0, 0, 0,.5);
 }
 
 .Header-List{
-  font-family: Montserrat;
-  padding:20px 30px;
+  font-family: "Montserrat";
+  display: inline-block;
+  padding: 30px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   background-color:#b3b3b3;
-  height: 40px;
 
 }
-li{list-style: none;
-    float:left;
-    padding: 0px 30px;
-    margin-left: 70px;
-   }
 
+.Header-List li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 70px;
+}
+/* END HEADER */
+.Utama h1{
+    margin-top: -300px;
+    text-align: center;
+}
 .Utama{
-  font-family: Montserrat;
-  margin-left: 420px;
-}
-.Profil{
-
-
+    margin: 0 10%;
 }
 
-.Visimisi{
-  margin-left: 420px;
+.Profil img, .Visimisi img, .Jasa img, .Tentang img{
+    margin: 40px 20%;
 }
 
+.Profil, .Visimisi, .Jasa, .Tentang{
+    margin: 50px 10%;
+}
 
+.Profil p, .Visimisi p, .Jasa p, .Tentang p {
+    padding: 10px 0;
+}
 
 .footer {
   background-color: #262626;
-  height: 80px;
+  padding: 30px 0;
 }
 .footer-list{
-  float:right;
+    display: flex;
+  justify-content: center;
 }
 
 .footer-list li{
-  padding: 20px  30px;
+  display: inline;
+  padding: 0 70px;
   color: white;
-  margin-right: 50px;
+  list-style: none;
+}
 
+@media screen and (max-width: 768px) {
+    .Header-List{
+        visibility: hidden;
+    }
+
+    .Utama{
+        margin: 0 5%;
+    }
+
+    
+    .Utama h1{
+        margin-top: -400px;
+    }
+
+    .Profil img, .Visimisi img, .Jasa img, .Tentang img{
+        margin: 90px 0;
+        max-width: 90%;
+    }
+
+    .popup {
+        margin-left: 10%;
+        margin-right: 10%;
+    }    
 }
